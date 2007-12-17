@@ -13,7 +13,6 @@ BuildRequires: libglade2.0-devel perl-devel perl-ExtUtils-Depends perl-ExtUtils-
 BuildRequires: glitz-devel
 Requires: perl-Gtk2 
 Conflicts: drakxtools < 9.1-15mdk
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This package adds perl support for Glade 2.x to Gtk2-Perl.
