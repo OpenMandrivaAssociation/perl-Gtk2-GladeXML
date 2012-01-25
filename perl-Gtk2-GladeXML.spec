@@ -4,7 +4,7 @@
 Summary: Perl module for the glade libraries
 Name:    perl-%module
 Version: 1.007
-Release: %mkrel 3
+Release:	4
 License: GPL or Artistic
 Group:   Development/GNOME and GTK+
 Source:  %module-%version.tar.bz2
