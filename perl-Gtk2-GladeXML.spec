@@ -1,19 +1,22 @@
 %define module Gtk2-GladeXML
 %define fmodule Glade
 
-Summary: Perl module for the glade libraries
-Name:    perl-%module
-Version: 1.007
-Release:	4
-License: GPL or Artistic
-Group:   Development/GNOME and GTK+
-Source:  %module-%version.tar.bz2
-URL: http://gtk2-perl.sf.net/
-BuildRequires: libglade2.0-devel perl-devel perl-ExtUtils-Depends perl-ExtUtils-PkgConfig perl-Gtk2
-BuildRequires: glitz-devel
-Requires: perl-Gtk2 
-Conflicts: drakxtools < 9.1-15mdk
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Summary:	Perl module for the glade libraries
+Name:		perl-%module
+Version:	1.007
+Release:	5
+License:	GPL or Artistic
+Group:		Development/GNOME and GTK+
+Source0:	%module-%version.tar.bz2
+URL:		http://gtk2-perl.sf.net/
+BuildRequires:	libglade2.0-devel
+BuildRequires:	perl-devel
+BuildRequires:	perl-ExtUtils-Depends
+BuildRequires:	perl-ExtUtils-PkgConfig
+BuildRequires:	perl-Gtk2
+BuildRequires:	glitz-devel
+Requires:	perl-Gtk2 
+Conflicts:	drakxtools < 9.1-15mdk
 
 %description
 This package adds perl support for Glade 2.x to Gtk2-Perl.
@@ -33,15 +36,9 @@ make OPTIMIZE="$RPM_OPT_FLAGS"
 #%make test || :
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
-
 %files
-%defattr(-, root, root)
 %doc examples
 %{_mandir}/*/*
 %{perl_vendorarch}/Gtk2/*
@@ -51,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.007-4
+* Wed Jan 25 2012 Per Ã˜yvind Karlsen <peroyvind@mandriva.org> 1.007-4
 + Revision: 768358
 - svn commit -m mass rebuild of perl extension against perl 5.14.2
 
@@ -94,7 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 * Tue Oct 04 2005 Thierry Vignaud <tvignaud@mandriva.com> 1.005-1mdk
 - new release
 
-* Sat Oct 01 2005 Nicolas L�cureuil <neoclust@mandriva.org> 1.001-3mdk
+* Sat Oct 01 2005 Nicolas Lécureuil <neoclust@mandriva.org> 1.001-3mdk
 - buildrequires fix
 
 * Thu Dec 02 2004 Austin Acton <austin@mandrake.org> 1.001-2mdk
