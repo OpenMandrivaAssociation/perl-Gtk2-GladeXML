@@ -8,6 +8,7 @@ Release:	8
 License:	GPL or Artistic
 Group:		Development/GNOME and GTK+
 Source0:	%module-%version.tar.bz2
+Source100:	%{name}.rpmlintrc
 URL:		http://gtk2-perl.sf.net/
 BuildRequires:	pkgconfig(libglade-2.0)
 BuildRequires:	perl-devel
